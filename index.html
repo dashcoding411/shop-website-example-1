@@ -3,62 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mock Shop</title>
-    <link rel="stylesheet" href="static/css/styles.css"> <!-- Updated path to CSS -->
+    <title>Mock Shop - Home</title>
+    <link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body>
     <header>
         <h1>Mock Shop</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <section id="products">
-            <h2>Our Products</h2>
+        <section id="intro">
+            <h2>Welcome to Mock Shop!</h2>
+            <p>Your one-stop shop for amazing products at unbeatable prices!</p>
+        </section>
+        
+        <section id="trending">
+            <h2>Trending Products</h2>
             <div class="product-grid">
                 <div class="product-card">
                     <div class="image-container">
-                        <img src="https://via.placeholder.com/200" alt="Item 1">
+                        <img src="https://via.placeholder.com/200" alt="Trending Item 1">
                     </div>
-                    <h3>Item 1</h3>
-                    <p>Description of Item 1</p>
+                    <h3>Trending Item 1</h3>
                     <span class="price">$10.00</span>
-                    <button onclick="addToCart('Item 1')">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <div class="image-container">
-                        <img src="https://via.placeholder.com/200" alt="Item 2">
+                        <img src="https://via.placeholder.com/200" alt="Trending Item 2">
                     </div>
-                    <h3>Item 2</h3>
-                    <p>Description of Item 2</p>
+                    <h3>Trending Item 2</h3>
                     <span class="price">$15.00</span>
-                    <button onclick="addToCart('Item 2')">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <div class="image-container">
-                        <img src="https://via.placeholder.com/200" alt="Item 3">
+                        <img src="https://via.placeholder.com/200" alt="Trending Item 3">
                     </div>
-                    <h3>Item 3</h3>
-                    <p>Description of Item 3</p>
+                    <h3>Trending Item 3</h3>
                     <span class="price">$20.00</span>
-                    <button onclick="addToCart('Item 3')">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <div class="image-container">
-                        <img src="https://via.placeholder.com/200" alt="Item 4">
-                    </div>
-                    <h3>Item 4</h3>
-                    <p>Description of Item 4</p>
-                    <span class="price">$25.00</span>
-                    <button onclick="addToCart('Item 4')">Add to Cart</button>
                 </div>
             </div>
+        </section>
+
+        <section id="sales">
+            <h2>Current Sales</h2>
+            <p>Don't miss our amazing sales on selected items!</p>
         </section>
     </main>
     
@@ -66,6 +61,6 @@
         <p>© 2024 Mock Shop. All rights reserved.</p>
     </footer>
 
-    <script src="static/js/script.js"></script> <!-- Updated path to JavaScript -->
+    <script src="static/js/script.js"></script>
 </body>
 </html>

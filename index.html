@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mock Shop - Home</title>
     <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+        #trending {
+            overflow: hidden;
+            position: relative;
+            height: 250px; /* Adjust based on your design */
+        }
+        .product-grid {
+            display: flex;
+            transition: transform 0.5s ease;
+            position: absolute;
+            will-change: transform;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,7 +39,7 @@
         
         <section id="trending">
             <h2>Trending Products</h2>
-            <div class="product-grid">
+            <div class="product-grid" id="product-container">
                 <div class="product-card">
                     <div class="image-container">
                         <img src="https://via.placeholder.com/200" alt="Trending Item 1">
@@ -48,6 +61,13 @@
                     <h3>Trending Item 3</h3>
                     <span class="price">$20.00</span>
                 </div>
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="https://via.placeholder.com/200" alt="Trending Item 4">
+                    </div>
+                    <h3>Trending Item 4</h3>
+                    <span class="price">$25.00</span>
+                </div>
             </div>
         </section>
 
@@ -62,5 +82,17 @@
     </footer>
 
     <script src="static/js/script.js"></script>
+    <script>
+        const productContainer = document.getElementById('product-container');
+        let scrollIndex = 0;
+
+        function scrollProducts() {
+            const productWidth = productContainer.children[0].offsetWidth; // Get the width of a single product
+            scrollIndex = (scrollIndex + 1) % productContainer.children.length; // Update scroll index
+            productContainer.style.transform = `translateX(-${scrollIndex * productWidth}px)`; // Scroll to the next product
+        }
+
+        setInterval(scrollProducts, 3000); // Change products every 3 seconds
+    </script>
 </body>
 </html>
